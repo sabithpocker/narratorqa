@@ -1,0 +1,9 @@
+{% if latest_catalog_list %}
+<ul>
+{% for catalog in latest_catalog_list %}
+    <li><a href="catalog/{{ catalog.id }}/">{{ catalog.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No catalog available.</p>
+{% endif %}

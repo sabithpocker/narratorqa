@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" media="all">
+        <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" media="all">
+        <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+        <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
+    </head>
+    <body>
+        {{ node.title }}
+        <a href="{{ node.url }}"> {{node.title}}</a>
+
+        {% autoescape off %}{{ div }} {{script}} {{ data }}{% endautoescape %}
+    </body>
+</html>

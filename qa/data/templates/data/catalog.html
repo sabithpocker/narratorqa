@@ -1,0 +1,11 @@
+<h1>{{ catalog.title }}</h1>
+{% if catalog.ministry_department %}<h3>{{ catalog.ministry_department }}</h3>{% endif %}
+{% if catalog.state_department %}<h3>{{ catalog.state_department }}</h3>{% endif %}
+<h4> {{ catalog.data_sets_actual_count }} </h4>
+<h5> {{ catalog.last_updated }} </h5>
+<a href="https://data.gov.in{{ catalog.url }}"> {{ catalog.url}}</a>
+<ul>
+{% for node in catalog.node_set.all %}
+<li><a href="node/{{node.id}}">{{ node.title }}</a></li>
+{% endfor %}
+</ul>
